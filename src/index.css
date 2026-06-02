@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#111113] text-[#EDEDEF];
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#19191b] border border-[#2a2a2d] rounded-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-[#ededef] hover:bg-white text-[#111113] font-medium text-sm py-2 px-4 rounded-md transition-colors duration-150 cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent hover:bg-[#222224] text-[#a0a0a3] hover:text-[#ededef] font-medium text-sm py-2 px-4 rounded-md transition-colors duration-150 border border-[#2a2a2d] cursor-pointer;
+  }
+
+  .btn-danger {
+    @apply bg-[#e5484d]/10 hover:bg-[#e5484d]/20 text-[#e5484d] font-medium text-sm py-2 px-4 rounded-md transition-colors duration-150 cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full bg-[#111113] border border-[#2a2a2d] rounded-md px-3 py-2 text-sm text-[#ededef] placeholder-[#4e4e51] focus:outline-none focus:ring-1 focus:ring-[#3e3e42] focus:border-[#3e3e42] transition-colors;
+  }
+
+  .label-text {
+    @apply block text-xs font-medium text-[#6e6e73] mb-1.5 uppercase tracking-wider;
+  }
+
+  .table-th {
+    @apply px-4 py-2.5 text-left text-[11px] font-medium text-[#6e6e73] uppercase tracking-wider border-b border-[#2a2a2d];
+  }
+
+  .table-td {
+    @apply px-4 py-3 text-sm text-[#a0a0a3] border-b border-[#1e1e20];
+  }
+}
